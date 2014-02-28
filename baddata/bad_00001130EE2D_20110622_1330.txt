@@ -1,0 +1,5 @@
+Ecotone Unit: Rain Logger
+Serial Number: 00001130EE2D
+Log Read: 6/22/2011 13:30:56
+ 
+____Date___ ,Time ,Rainfall

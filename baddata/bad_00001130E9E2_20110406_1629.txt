@@ -1,0 +1,7 @@
+Ecotone Unit: Level Logger
+Serial Number: 00001130E9E2
+Probe Number: 00001130E9E2
+Log Read: 4/6/2011 16:29:00
+ 
+____Date___ ,Time ,_Level_,Units
+Battery Failure detection       

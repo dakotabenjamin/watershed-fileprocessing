@@ -1,0 +1,6 @@
+Ecotone Unit: Level Logger
+Serial Number: 00001130E43F
+Probe Number: 00001130E43F
+Log Read: 6/8/2010 15:21:16
+ 
+____Date___ ,Time ,_Level_,Units

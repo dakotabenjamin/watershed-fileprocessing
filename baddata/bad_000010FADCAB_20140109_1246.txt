@@ -1,0 +1,6 @@
+Ecotone Unit: Level Logger
+Serial Number: 000010FADCAB
+Probe Number: 000010FADCAB
+Log Read: 1/9/2014 12:46:51
+ 
+____Date___ ,Time ,_Level_,Units

@@ -1,0 +1,14 @@
+Ecotone Unit: Level Logger
+Serial Number: 000011313C87
+Probe Number: 000011313C87
+Log Read: 8/26/2013 12:38:12
+ 
+____Date___ ,Time ,_Level_,Units
+Battery Failure detection       
+Battery Failure detection       
+Battery Failure detection       
+Battery Failure detection       
+Battery Failure detection       
+Battery Failure detection       
+Battery Failure detection       
+Battery Failure detection       

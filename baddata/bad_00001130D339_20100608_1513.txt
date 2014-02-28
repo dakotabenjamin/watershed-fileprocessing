@@ -1,0 +1,6 @@
+Ecotone Unit: Level Logger
+Serial Number: 00001130D339
+Probe Number: SerialID_Err
+Log Read: 6/8/2010 15:13:43
+ 
+____Date___ ,Time ,_Level_,Units
