@@ -52,7 +52,7 @@ then for file in "${files[@]}"; do
 
 		--deletes rows with incorrect calibrations
 		DELETE FROM well_$tablename WHERE (datetime, retrieval_date) NOT IN (
-		SELECT datetime, MIN(retrieval_date) FROM wells GROUP BY datetime
+		SELECT datetime, MIN(retrieval_date) FROM well_$tablename GROUP BY datetime
 		);"
 	
         #move raw data and porcessed data to storage locations
