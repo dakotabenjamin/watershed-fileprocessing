@@ -2,3 +2,5 @@ raw_archive/*
 baddata/*
 processed/*
 *.txt
+*.swp
+*.swo
