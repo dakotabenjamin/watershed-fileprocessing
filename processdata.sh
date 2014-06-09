@@ -8,11 +8,13 @@ if [ -r $files ];
 #if [ "$files" == *.txt ];
 then for file in "${files[@]}"; do
         #run postgres commands on processed file
-	tablename=`echo $file | awk -F'_' '{print $1}' | sed 's/0000//'`
-	#Remove any faulty data
+	#Label the table LTL01_11311045
+	tablename=`echo $file | awk -F'_' '{print $1$2}'`
+	echo $tablename
+	#Remove the header and any rows that suck
 	tail -n +7 $file | grep --perl-regexp  -v "(0[1-9]|1[0-2])\/([0-2][0-9]|3[0-1])\/20[0-9]{2}" $file > /tmp/baddata && mv /tmp/baddata ./baddata/bad_$file
 	if [ -f baddata/bad_$file  ]; then echo "Some bad rows were removed. See baddata directory";fi;
-	#Remove the top 6 lines
+	#I don't know what this line does. It looks like it removes some rows. 
 	tail -n +6 $file | grep --perl-regexp  "(0[1-9]|1[0-2])\/([0-2][0-9]|3[0-1])\/20[0-9]{2}"> /tmp/text && sudo mv /tmp/text up_$file
 
 	#Adds columns calibration and retrival date
@@ -32,9 +34,9 @@ then for file in "${files[@]}"; do
 	
 	cols=`echo $calibration | sed s/" | "/","/`
 	awk -v d="$cols" '{print $1"," d};' up_$file > ready_$file | sed 's/                   //';
-	#rm up_$file;
+	rm up_$file;
 	newfile=ready_$file;
-
+	echo $calibration;
 	#Copies processed data into db	
 	sudo -u postgres psql -c "
 		CREATE TABLE IF NOT EXISTS well_$tablename ( ) INHERITS (wells);
